@@ -26,9 +26,4 @@ ReverseShell.asm: Contains the code for the reverse shell.
 Please note that the project should be used for educational purposes only. Usage of this project for any illegal or malicious activities is strictly prohibited. The code and resulting binaries should be used responsibly and in compliance with applicable laws and regulations.
 
 ## Contributers
-
-<a href="https://github.com/r1TOASTER/Mockingjay-Double-Shellcode-msys-Dll-Injection/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=r1TOASTER/Mockingjay-Double-Shellcode-msys-Dll-Injection" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
+![107408933 (1) (1)](https://github.com/r1TOASTER/Mockingjay-Double-Shellcode-msys-Dll-Injection/assets/71131606/835a76fb-44ef-4c1e-8830-dcd3614e805d) - @natitati4

